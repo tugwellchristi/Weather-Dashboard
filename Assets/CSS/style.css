@@ -1,0 +1,21 @@
+body {
+    background-image: url('/Assets/CSS/texture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.search {
+    font-weight: bolder;
+    color: black;
+}
+
+.searchBtn {
+    border-radius: 4px;
+    background-color: rgb(4, 189, 189);
+    color: white;
+    padding: 5px 8px;
+
+}
+
