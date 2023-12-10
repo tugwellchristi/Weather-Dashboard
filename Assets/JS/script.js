@@ -15,18 +15,53 @@ function getCurrentWeather(city) {
         })
         .then(function (data) {
             console.log(data);
-            const weatherInfo = `<p><strong>City: ${data.name}<strong></p><p>Temperature: ${data.main.temp}&deg;F</p>`;
+
+            const currentDate = new Date();
+            const formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
+            const weatherInfo = `<p><strong>City: ${data.name}  (${formattedDate})<strong></p><p>Temperature: ${data.main.temp}&deg;F</p><p>Humidity: ${data.main.humidity}%</p><p>Wind: ${data.wind.speed} MPH</p>`;
             document.getElementById("weatherDashboard").innerHTML = weatherInfo;
         })
         .catch(function (error) {
             console.error("Error fetching weather data", error);
         });
 }
+function getForecast(city) {
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}&units=imperial`;
 
+    fetch(forecastURL)
+        .then(function (res) {
+            console.log(res);
+            return res.json();
+        })
+        .then(function (data) {
+            console.log(data);
+
+            const forecastContainer = document.getElementById("weatherDashboard");
+            forecastContainer.innerHTML = "";
+
+            for (let i = 0; i < 5; i++) {
+                const date = new Date(data.list[i].dt * 1000);
+                const formattedDate = `${date.getMonth()}/${date.getDate() +1}/${date.getFullYear()}`;
+
+                const forecastBox = document.createElement("div");
+                forecastBox.classList.add("forecast-box");
+                forecastBox.innerHTML = `
+                <p>Date: ${formattedDate}</p>
+                <p>Temperature: ${data.list[i].main.temp}&deg;F</p>
+                <p>Humidity: ${data.list[i].main.humidity}%</p>
+                <p>Wind: ${data.list[i].wind.speed} MPH</p>`;
+
+                forecastContainer.appendChild(forecastBox);
+            }
+        })
+        .catch(function (error) {
+            console.error("Error fetching weather data", error);
+        });
+}
 function addCity() {
     city = searchInput.value.trim();
     console.log(city);
-    
+
     if (city !== "") {
         saveCity(city);
         displaySavedCities();
@@ -53,10 +88,12 @@ function displaySavedCities() {
         cityButton.classList.add("button", "is-primary", "mt-1", "ml-5");
         cityButton.addEventListener("click", function () {
             getCurrentWeather(city);
+            getForecast(city);
         });
         searchedCitiesContainer.appendChild(cityButton);
     })
 }
+
 
 searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -65,6 +102,7 @@ searchForm.addEventListener("submit", function (event) {
 
 function clearCitiesBtn() {
     localStorage.removeItem("savedCities");
+    localStorage.removeItem("")
     displaySavedCities();
 }
 
