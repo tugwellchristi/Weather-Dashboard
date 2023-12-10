@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,36 @@
     <link rel="stylesheet" href="/Assets/CSS/style.css">
     <title>Weather Dashboard</title>
 </head>
+
 <body>
+    
     <section class="hero is-small is-primary">
         <div class="hero-body">
-            <p class="title ">Weather Dashboard</p>
+            <p class="title has-text-centered">Weather Dashboard</p>
         </div>
     </section>
-    <div class="search-form-container">
-        <h1 class="search m-3">Search for a City:</h1>
-        <form action="" class="search-form m-3" id="search-form">
-            <input type="Search City" id="searchedCity">
-            <br />
-            <button class="searchBtn mt-3">Search</button>
-        </form>
+    <div class="columns">
+        <div class="column is-one-quarter">
+            <div class="search-form-container">
+                <h1 class="search mx-5 text-with-shadow">Enter a City:</h1>
+                <form action="" class="search-form mx-5" id="search-form">
+                    <input type="Search City" id="searchCity" class="larger-input" placeholder="E.g., Seattle">
+                    <br />
+                    <button class="button is-dark is-bordered mt-3" onclick="addCity()">Add City</button>
+                    <button class="button is-dark is-bordered" onclick="clearCitiesBtn()">Reset Cities</button>
+                </form>
+                <div id="searchedCities">
+                    <!-- Saved cities will be entered here -->
+                </div>
+            </div>
+            
+        </div>
+            <div class="column is-two-thirds" id="weatherDashboard">
+                
+            </div>
+        </div>
     </div>
     <script src="./Assets/JS/script.js"></script>
 </body>
+
 </html>

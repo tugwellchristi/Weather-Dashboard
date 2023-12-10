@@ -8,14 +8,30 @@ body {
 
 .search {
     font-weight: bolder;
+    font-size: x-large;
     color: black;
+    text-shadow: 0 0 10px white;
 }
 
-.searchBtn {
+.larger-input {
+    height: 40px;
+    width: 250px;
+    border: 1px solid black;
+}
+
+.button {
     border-radius: 4px;
-    background-color: rgb(4, 189, 189);
     color: white;
     padding: 5px 8px;
-
+    margin-bottom: 20px;
+    height: 40px;
+    width: 250px;
 }
 
+#weatherDashboard {
+    background-color: lightgray;
+    margin-right: 40px;
+    margin-top: 43px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+}
