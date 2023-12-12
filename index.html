@@ -23,8 +23,8 @@
                 <form action="" class="search-form mx-5" id="search-form">
                     <input type="Search City" id="searchCity" class="larger-input" placeholder="E.g., Seattle">
                     <br />
-                    <button class="button is-dark is-bordered mt-3" onclick="addCity()">Add City</button>
-                    <button class="button is-dark is-bordered" onclick="clearCitiesBtn()">Reset Cities</button>
+                    <button class="button is-dark mt-3" onclick="addCity()">Add City</button>
+                    <button class="button is-dark" onclick="clearCitiesBtn()">Reset Cities</button>
                 </form>
                 <div id="searchedCities">
                     <!-- Saved cities will be entered here -->
@@ -32,12 +32,17 @@
             </div>
             
         </div>
-            <div class="column is-two-thirds is-full-mobile" id="weatherDashboard">
+            <div class="column is-two-thirds" id="weatherDashboard">
                  <div id="currentWeather">
                     <!-- Current weather for the specified city will be entered here upon search entry -->
                 </div> 
-                <div id="forecast">
+                <div id="forecast" class="columns is-vcentered mt-2 ml-0">
                     <!-- 5 day forecasts will be entered here upon search entry -->
+                    <div id="day1" class="column"></div>
+                    <div id="day2" class="column"></div>
+                    <div id="day3" class="column"></div>
+                    <div id="day4" class="column"></div>
+                    <div id="day5" class="column"></div>
                 </div>
             </div>
         </div>

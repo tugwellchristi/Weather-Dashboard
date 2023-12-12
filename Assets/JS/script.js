@@ -21,8 +21,8 @@ function getCurrentWeather(city) {
 
             const currentDate = new Date();
             const formattedDate = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
-            const weatherInfo = `<p><strong>City: ${data.name}  (${formattedDate})<strong></p>
-                                 <p>Current Conditions: ${data.weather[0].description} ${getWeatherEmoji(data.weather[0].icon)}</p>
+            const weatherInfo = `<p><strong>City: ${data.name} (${formattedDate}) ${getWeatherEmoji(data.weather[0].icon)}<strong></p>
+                                 <p>Current Conditions: ${data.weather[0].description} </p>
                                  <p>Temperature: ${data.main.temp}&deg;F</p>
                                  <p>Humidity: ${data.main.humidity}%</p>
                                  <p>Wind: ${data.wind.speed} MPH</p>`;
@@ -55,8 +55,8 @@ function getForecast(city) {
 
                 const forecastBox = `
                 <div class="column forecast-box">
-                <p>Date: ${formattedDate}</p>
-                <p>Conditions: ${data.list[i *8].weather[0].description} ${getWeatherEmoji(data.list[i *8].weather[0].icon)}</p>
+                <p>Date: ${formattedDate}  ${getWeatherEmoji(data.list[i *8].weather[0].icon)}</p>
+                <p>Conditions: <br />${data.list[i *8].weather[0].description}</p>
                 <p>Temperature: ${data.list[i *8].main.temp}&deg;F</p>
                 <p>Humidity: ${data.list[i *8].main.humidity}%</p>
                 <p>Wind: ${data.list[i *8].wind.speed} MPH</p>
