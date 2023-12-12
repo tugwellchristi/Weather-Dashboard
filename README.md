@@ -14,7 +14,9 @@ This application was designed to provide ease to travelers that want to view wea
 - Bulma [CSS](https://bulma.io/)
 
 ## Deployed Application
-  
+Access the deployed application [here]() 
+
+![Screen Shot 2023-12-11 at 7 08 24 PM](https://github.com/tugwellchristi/Weather-Dashboard/assets/90078824/24a1e203-49c5-496f-a5f9-b6dd6b30021a)
 
 ## Contact
 Contact me at the following: 
