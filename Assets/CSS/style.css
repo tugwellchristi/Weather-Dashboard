@@ -35,3 +35,8 @@ body {
     margin-bottom: 30px;
     border: 1px solid black;
 }
+
+@media screen and (min-width: 480px) {
+    #weatherDashboard {margin: 24px 40px;}
+    #leftColumn {text-align: center;}
+}
