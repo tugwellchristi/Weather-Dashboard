@@ -14,7 +14,8 @@ This application was designed to provide ease to travelers that want to view wea
 - Bulma [CSS](https://bulma.io/)
 
 ## Deployed Application
-Access the deployed application [here]() 
+Access the deployed application [here](https://simple-brash-vole.glitch.me) 
+Access to the code on [glitch.com](https://glitch.com/edit/#!/simple-brash-vole)
 
 ![Screen Shot 2023-12-12 at 2 59 07 PM](https://github.com/tugwellchristi/Weather-Dashboard/assets/90078824/f43a8774-4cb6-4a1b-a37a-f44d592c5353)
 
