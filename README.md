@@ -1,7 +1,7 @@
 # Weather-Dashboard
 
 ## Project Description
-This application was designed to provide ease to travelers that want to view weather forecasts among varies cities in one place. The following features and functionality were included in the design:
+This application was designed to provide ease to travelers that want to view weather forecasts among various cities in one place. The following features and functionality were included in the design:
 - Presents previous city searches and stored current and future conditions of those cities
 - Displays 5 day forecast of city with date, weather conditions icon, temperature, wind speed, and humidity
 - Featured city search displays city name, date, weather conditions icon, temperature, humidity, and wind
@@ -15,6 +15,7 @@ This application was designed to provide ease to travelers that want to view wea
 
 ## Deployed Application
 Access the deployed application [here](https://simple-brash-vole.glitch.me) 
+
 Access to the code on [glitch.com](https://glitch.com/edit/#!/simple-brash-vole)
 
 ![Screen Shot 2023-12-12 at 2 59 07 PM](https://github.com/tugwellchristi/Weather-Dashboard/assets/90078824/f43a8774-4cb6-4a1b-a37a-f44d592c5353)
